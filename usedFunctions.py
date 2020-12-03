@@ -23,9 +23,9 @@ def returnMiddleValueint(a, b, c):
 
 def returnMiddleValue(f, m, l):
 
-    a = f["value"]
-    b = m["value"]
-    c = l["value"]
+    a = f[0]
+    b = m[0]
+    c = l[0]
 
     if a <= b and a >= c:
         return f
@@ -46,23 +46,23 @@ def returnMiddleValue(f, m, l):
         return l
 
 
-def IssmallerThanThePivot(list, pivot, currentIndex):
+def IssmallerThanThePivot(list, pivotValue, elementToCheckValue):
 
 
-    if   list[currentIndex] < pivot["value"]:
+    if   elementToCheckValue < pivotValue:
         return True
 
     return False
 
-def swap(border, pointer, list):
+def swap(firstElementArray, secondElementArray, list):
 
     outputList = list
-    tempParam = border
-    border2 = pointer
-    pointer2 = tempParam
+    tempParam = firstElementArray
+    SwitchedFirstElement = secondElementArray
+    SwitchedSecondElement = tempParam
 
-    if pointer2["value"] != border2["value"]:
-        outputList[pointer2["index"]] = border2["value"]
-        outputList[border2["index"]] = pointer2["value"]
+    if SwitchedSecondElement[0] != SwitchedFirstElement[0]:
+        outputList[SwitchedSecondElement[1]] = SwitchedFirstElement[0]
+        outputList[SwitchedFirstElement[1]] = SwitchedSecondElement[0]
     return outputList
 
